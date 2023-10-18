@@ -6,6 +6,7 @@ const Login = ({setHaveAccount}) => {
         email:"",
         password:""
     })
+    console.log(loginData);
     return (
         <div className="login_form">
             <div className="social_login">

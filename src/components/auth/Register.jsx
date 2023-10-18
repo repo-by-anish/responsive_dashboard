@@ -7,6 +7,7 @@ const Register = ({setHaveAccount}) => {
         email:"",
         password:""
     })
+    console.log(registerData);
     return (
         <div className="login_form">
             <div className="social_login">
