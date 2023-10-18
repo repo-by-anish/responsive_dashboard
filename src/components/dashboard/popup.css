@@ -1,0 +1,232 @@
+:root {
+    --primary_bg1: #4285F4;
+    --primary_bg2: #286DE0;
+    --secondary_bg: #F8FAFF;
+    --pimary_text: #000000;
+    --secondary_text: #FFFFFF;
+    --sm_backgrount: #FFFFFF;
+    --field_color: #EAEAEA;
+    --placeholder_1: #858585;
+    --link_1: #346BD4;
+    --logo_bg: #7FCD93;
+    --user_bar: #98D89E;
+    --guest_bar: #EE8484;
+}
+
+@keyframes stb {
+    0% {
+        opacity: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    100% {
+        opacity: 1;
+        width: 560px;
+        height: 560px;
+    }
+}
+
+.pop_fullscreen {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #8585856d;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.popup {
+    height: 544px;
+    width: 544px;
+    border-radius: 16px;
+    animation-name: stb;
+    animation-duration: 300ms;
+    z-index: 10;
+    position: relative;
+    background-color: var(--sm_backgrount);
+}
+
+.pop_header {
+    display: flex;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+
+.pop_header h3 {
+    font-family: 'Figtree', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    color: var(--pimary_text);
+}
+
+.pop_header div {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.pop_header div:hover {
+    font-size: 38px;
+}
+
+.add_user_main_form {
+    padding: 20px;
+}
+
+.add_u_toggle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #000000;
+}
+
+.styled_hr{
+    width: 200px;
+    border: 2px solid #3F84F8;
+    transition: all 200ms;
+    border-radius: 3px;
+}
+
+.add_u_toggle .hr {
+    width: 200px;
+    border: 2px solid #D9D9D9;
+    transition: all 200ms;
+    border-radius: 3px;
+}
+
+
+
+.au__input_item {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 24px;
+    color: #000000;
+}
+.au__input_item label{
+    margin-bottom: 8px;
+}
+
+.au__input_item input {
+    border: none;
+    outline: none;
+    background: var(--sm_backgrount);
+    border: 1px solid #F2F2F2;
+    padding: 12px 16px 12px 16px;
+    border-radius: 8px;
+}
+
+::placeholder{
+    color: #999CA0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.next_button {
+    width: 64px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #3E84F8;
+    color: var(--secondary_text);
+}
+.action_button{
+    text-align: right;
+    margin-top: 45px;
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 90px;
+    border-top: 1px solid #F2F2F2;
+}
+
+.back_button{
+    width: 64px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 1rem;
+    background-color: #FFFFFF;
+    border: 1px solid #999CA0;
+    color: var(--pimary_text);
+}
+
+
+@media screen and (max-width: 400px) {
+    
+    .popup {
+        height: 470px;
+        width: 325px;
+    }
+    
+    .pop_header {
+        height: 50px;
+    }
+    
+    
+    .pop_header h3 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .pop_header div {
+        font-size: 35px;
+    }
+    
+    .pop_header div:hover {
+        font-size: 33px;
+    }
+    
+    .add_user_main_form {
+        padding: 20px;
+    }
+    
+    .add_u_toggle {
+        font-size: 14px;
+        line-height: 20px;
+        height: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .styled_hr{
+        width: 130px;
+    }
+    
+    .add_u_toggle .hr {
+        width: 130px;
+    }
+    .next_button {
+        width: 64px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: #3E84F8;
+        color: var(--secondary_text);
+    }
+    .action_button{
+        width: 280px;
+    }
+}

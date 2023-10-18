@@ -1,0 +1,244 @@
+:root {
+    --primary_bg1: #4285F4;
+    --primary_bg2: #286DE0;
+    --secondary_bg: #F8FAFF;
+    --pimary_text: #000000;
+    --secondary_text: #FFFFFF;
+    --sm_backgrount: #ffffff;
+    --field_color: #EAEAEA;
+    --placeholder_1: #858585;
+    --link_1: #346BD4;
+}
+
+@keyframes bts {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 2;
+    }
+}
+
+.resp_logo {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.f_poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.f_monts {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.f_lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.auth {
+    display: flex;
+    background-color: var(--secondary_bg);
+    position: relative;
+}
+
+.auth__left {
+    flex: 750px;
+    background-image: linear-gradient(to bottom, var(--primary_bg1), var(--primary_bg2));
+    min-height: 100vh;
+    transform: skew(-10deg) translateX(-100px);
+    overflow-x: hidden;
+    color: var(--secondary_text);
+}
+
+.auth_left_inner {
+    transform: skew(10deg) translateX(100px);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    height: calc(100vh - 2rem);
+}
+
+.board {
+    margin: 40vh auto auto 250px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 24px;
+    line-height: 29.44px;
+    font-weight: 700;
+}
+
+.social {
+    width: 500px;
+    text-align: center;
+}
+
+
+.auth__right {
+    flex: calc(100vw - 750px);
+    height: calc(100vh - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.social_login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 423px;
+    margin-bottom: 25px;
+}
+
+.sl__item {
+    height: 33px;
+    width: 198px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--placeholder_1);
+    text-decoration: none;
+    background-color: var(--sm_backgrount);
+}
+
+.sl__item img {
+    width: 15px;
+}
+
+.login_form input {
+    background-color: var(--field_color);
+    width: 356px;
+    height: 44px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+.login_form label {
+    margin-bottom: 0.5rem;
+}
+
+
+.login_form input,
+button {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.login_form {
+    animation-name: bts;
+    animation-duration: 1s;
+}
+
+.login_form form {
+    display: flex;
+    flex-direction: column;
+    width: 423px;
+    height: 391px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sm_backgrount);
+}
+
+.login_form button {
+    margin-top: 1rem;
+    width: 360px;
+    height: 50px;
+    background-color: var(--primary_bg1);
+    color: var(--secondary_text);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.5px;
+    cursor: pointer;
+}
+
+.input_item {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* For Mobile */
+
+@media screen and (max-width:400px) {
+
+    .auth__left {
+        flex: 200px;
+        display: none;
+    }
+
+    .login_form input {
+        width: 300px;
+        height: 40px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17.2px;
+    }
+
+    .login_form form {
+        width: 350px;
+        height: 360px;
+    }
+
+    .login_form button {
+        width: 300px;
+        height: 44px;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    .social_login {
+        width: 350px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sl__item {
+        height: 44px;
+        width: 350px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .sl__item img {
+        margin-right: 7px;
+        width: 21px;
+    }
+
+    .auth__right {
+        flex: 100vw;
+        padding: 1rem 1rem;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .resp_logo {
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        font-size: 24px;
+        line-height: 29.44px;
+        font-weight: 700;
+        color: var(--primary_bg2);
+    }
+}
