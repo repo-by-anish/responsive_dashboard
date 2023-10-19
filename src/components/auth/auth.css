@@ -172,11 +172,28 @@ button {
 
 /* For Mobile */
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 440px) {
 
     .auth__left {
         flex: 200px;
         display: none;
+    }
+
+    .form_name {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 2rem;
     }
 
     .login_form input {
@@ -240,5 +257,18 @@ button {
         line-height: 29.44px;
         font-weight: 700;
         color: var(--primary_bg2);
+    }
+}
+
+
+/* Responsive Tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .auth__left {
+        transform: skew(-10deg) translateX(-120px);
+    }
+
+    .auth_left_inner {
+        transform: skew(10deg) translateX(120px);
     }
 }

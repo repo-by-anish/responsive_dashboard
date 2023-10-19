@@ -1,5 +1,3 @@
-import React from 'react'
-
 import AddUserForm from "./AddUserForm";
 
 const Popup = ({handleClose,setUsers}) => {

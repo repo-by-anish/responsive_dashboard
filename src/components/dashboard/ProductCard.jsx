@@ -2,6 +2,7 @@ import { useState } from "react"
 import "./popup.css"
 import Popup from "./Popup";
 import UserCard from "./UserCard";
+import PieChart from "./PieChart";
 
 const ProductCard = ({ data }) => {
     const [users, setUsers] = useState([]);
@@ -15,7 +16,7 @@ const ProductCard = ({ data }) => {
     return (
         <div className='product_card'>
             <div className="pc__left pc_item">
-
+            <PieChart/>
             </div>
             <div className="pc__right pc_item">
 

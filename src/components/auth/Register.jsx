@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = ({setHaveAccount}) => {
     const [registerData,setRegisterData]=useState({
@@ -7,9 +7,18 @@ const Register = ({setHaveAccount}) => {
         email:"",
         password:""
     })
+
+    const navigate = useNavigate();
+
+    const register=(e)=>{
+        e.preventDefault();
+        navigate("/dash");
+    }
     console.log(registerData);
     return (
         <div className="login_form">
+        <h2 className="form_name f_monts">Sign Up</h2>
+            <p className="f_lato form__para">Create your new account</p>
             <div className="social_login">
                 <Link className="sl__item f_monts">
                     <img src="logos/google.svg" alt="" />
@@ -20,7 +29,7 @@ const Register = ({setHaveAccount}) => {
                     Sign up with Apple
                 </Link>
             </div>
-            <form>
+            <form onSubmit={register}>
                 <div className="input_item">
                     <label className="f_lato" htmlFor="name">Name</label>
                     <input onChange={e=>setRegisterData(prev=>{return{...prev,name:e.target.value}})} required autoComplete ="off" className="f_lato" id="name" type="text" />
