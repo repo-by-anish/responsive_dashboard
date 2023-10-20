@@ -32,7 +32,7 @@ const Login = ({ setHaveAccount }) => {
                     <input onChange={e => setLoginData(prev => { return { ...prev, email: e.target.value } })} required autoComplete="off" className="f_lato" id="email" type="text" />
                 </div>
                 <div className="input_item">
-                    <label className="f_lato" htmlFor="pwd">Email Address</label>
+                    <label className="f_lato" htmlFor="pwd">Password</label>
                     <input onChange={e => setLoginData(prev => { return { ...prev, password: e.target.value } })} required autoComplete="off" className="f_lato" id="pwd" type="password" />
                 </div>
                 <div className="input_item">

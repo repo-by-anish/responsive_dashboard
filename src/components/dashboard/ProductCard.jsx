@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./popup.css"
 import Popup from "./Popup";
 import UserCard from "./UserCard";
@@ -13,6 +13,15 @@ const ProductCard = ({ data }) => {
     const handleClose = () => {
         setOpen(false);
     };
+
+    useEffect(()=>{
+        if(open){
+            document.body.classList.add("no_toggle");
+        }else{
+            document.body.classList.remove("no_toggle");
+        }
+    },[open]);
+
     return (
         <div className='product_card'>
             <div className="pc__left pc_item">

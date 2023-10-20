@@ -24,7 +24,7 @@ const BarGraph = () => {
     if (width < 500) {
         unit = 30
     } else if (width > 500 && width < 1000) {
-        unit = 35
+        unit = 40
     } else {
         unit = 40
     }

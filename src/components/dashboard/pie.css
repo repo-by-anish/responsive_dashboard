@@ -1,3 +1,8 @@
+.tp_main {
+    display: flex;
+    justify-content: space-around;
+}
+
 .top_product {
     padding: 1.5rem;
     width: calc(100% - 3rem);
@@ -6,9 +11,23 @@
 
 .tp_left {
     flex: 60%;
-    position: relative;
-    left: 1rem;
-    top: -5rem;
+}
+
+.tp_header {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+
+}
+
+.tp_header h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+
 }
 
 .tp_header span {
@@ -25,19 +44,10 @@ p {
     padding: 0;
 }
 
-.tp_main {
-    display: flex;
-    justify-content: space-around;
-    width: 240px;
-    align-items: center;
-    position: relative;
-
-}
-
 .tp_right {
     display: flex;
-    flex: 40%;
-    height: 100%;
+    flex: calc(40%-1rem);
+    height: calc(100% - 1rem);
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
@@ -46,7 +56,6 @@ p {
 .ci_item {
     display: flex;
     width: max-content;
-    transform: translateX(8rem);
     justify-content: space-around;
     align-items: center;
     margin-bottom: 15px;
@@ -58,22 +67,6 @@ p {
     border-radius: 5px;
     background-color: #917216;
     margin-right: 10px;
-}
-
-.tp_header h2 {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 30px;
-
-}
-
-.tp_header {
-    display: flex;
-    justify-content: space-between;
-
 }
 
 .ci_details h3 {
@@ -95,18 +88,6 @@ p {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 @property --p {
     syntax: '<number>';
     inherits: true;
@@ -115,10 +96,9 @@ p {
 
 .pie {
     --p: 20;
-    --b: 22px;
+    --b: 17px;
     --c: darkred;
     --w: 150px;
-
     width: var(--w);
     aspect-ratio: 1;
     position: relative;
@@ -171,8 +151,9 @@ p {
 }
 
 .main_pai_chart {
-    position: relative !important;
-    left: -30px;
+    position: relative;
+    height: 160px;
+    width: 160px;
 }
 
 .arrg_1,
@@ -191,4 +172,68 @@ p {
 
 .arrg_3 {
     transform: rotate(125deg);
+}
+
+
+@media screen and (max-width: 440px) {
+
+
+    .top_product {
+        padding: 1.5rem;
+        width: calc(100% - 3rem);
+    }
+
+    .tp_header span {
+        font-size: 13px;
+        line-height: 16px;
+    
+    }
+
+    .pie {
+        --b: 12px;
+        --w: 95px;
+    }
+
+    .tp_right {
+        display: flex;
+        flex: 40%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .ci_item {
+        margin-bottom: 9px;
+    }
+
+    .tp_header h2 {
+        font-size: 19px;
+        line-height: 25px;
+
+    }
+
+    .ci_details h3 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .ci_details span {
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        color: #858585;
+    }
+
+    .main_pai_chart {
+        position: relative;
+        height: 110px;
+        width: 110px;
+    }
+
+
+    .tp_header {
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+    }
 }

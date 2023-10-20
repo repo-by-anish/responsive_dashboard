@@ -335,14 +335,14 @@
 /* Product Card CSS */
 
 .product_card {
-    display: flex;
+    display: grid;
+    gap: 20px;
     width: 100%;
-    justify-content: space-between;
+    grid-template-columns: auto auto;
     margin-top: 40px;
 }
 
 .pc_item {
-    width: 480px;
     height: 256px;
     background-color: var(--sm_backgrount);
     border-radius: 20px;
@@ -620,12 +620,12 @@
     /* Product Card CSS */
 
     .product_card {
-        display: grid;
-        gap: 1rem;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
     }
 
     .pc_item {
-        width: 322px;
+        padding: 0;
         height: 200px;
     }
 
