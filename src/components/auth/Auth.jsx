@@ -29,6 +29,7 @@ const Auth = () => {
                     haveAccount ? <Login setHaveAccount={setHaveAccount} /> : <Register setHaveAccount={setHaveAccount} />
                 }
             </div>
+            <p className="note f_lato">Note: Use any Email and password to look into other component.</p>
         </div>
     )
 }

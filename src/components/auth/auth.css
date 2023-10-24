@@ -46,6 +46,14 @@ a {
     position: relative;
 }
 
+.auth .note{
+    position: absolute;
+    right: 10%;
+    bottom: 4rem;
+    font-weight: 400;
+    color: chocolate;
+}
+
 .auth__left {
     flex: 750px;
     background-image: linear-gradient(to bottom, var(--primary_bg1), var(--primary_bg2));
@@ -108,6 +116,10 @@ a {
     color: var(--placeholder_1);
     text-decoration: none;
     background-color: var(--sm_backgrount);
+}
+
+.form__para{
+    margin-bottom: 1rem;
 }
 
 .sl__item img {
