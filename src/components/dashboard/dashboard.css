@@ -338,7 +338,7 @@
     display: grid;
     gap: 20px;
     width: 100%;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     margin-top: 40px;
 }
 
@@ -746,7 +746,6 @@
     /* Product Card CSS */
 
     .pc_item {
-        width: 400px;
         height: 240px;
     }
 }
